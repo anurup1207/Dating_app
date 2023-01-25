@@ -10,8 +10,8 @@ class Chat extends Equatable {
 
   Chat({
     required this.id,
-    required this.userId,
-    required this.matchedUserId,
+    required this.userId, //user who is using the app
+    required this.matchedUserId, // the user who got matched
     required this.messages,
   });
 

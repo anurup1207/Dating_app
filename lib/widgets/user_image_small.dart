@@ -4,9 +4,13 @@ class UserImageSmall extends StatelessWidget {
   const UserImageSmall({
     Key? key,
     required this.ImageUrl,
+    this.height = 60,
+    this.width = 60,
   }) : super(key: key);
 
   final String ImageUrl;
+  final double height;
+  final double width;
 
   @override
   Widget build(BuildContext context) {
@@ -15,8 +19,8 @@ class UserImageSmall extends StatelessWidget {
         top: 8,
         right: 8,
       ),
-      height: 60,
-      width: 60,
+      height: height,
+      width: width,
       decoration: BoxDecoration(
         image: DecorationImage(
           image: NetworkImage(

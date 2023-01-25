@@ -4,8 +4,8 @@ import 'models.dart';
 
 class UserMatch extends Equatable {
   final int id;
-  final int userId;
-  final User matchedUser;
+  final int userId; //user who is using the app
+  final User matchedUser; // the user who got matched
   final List<Chat>? chat;
 
   UserMatch({
