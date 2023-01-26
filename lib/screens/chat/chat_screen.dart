@@ -67,7 +67,12 @@ class ChatScreen extends StatelessWidget {
                                       BorderRadius.all(Radius.circular(8.0)),
                                 ),
                                 child: Text(
-                                    userMatch.chat![0].messages[index].message),
+                                  userMatch.chat![0].messages[index].message,
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .headline6!
+                                      .copyWith(color: Colors.white),
+                                ),
                               ),
                             ),
                     );
