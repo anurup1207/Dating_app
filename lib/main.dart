@@ -1,6 +1,7 @@
 import 'package:dating_app/blocs_swipe/swipe_bloc.dart';
 import 'package:dating_app/config/theme.dart';
 import 'package:dating_app/onboarding/onboarding_screen.dart';
+import 'package:dating_app/screens/chat/chat_screen.dart';
 import 'package:dating_app/screens/home/home_screen.dart';
 import 'package:dating_app/screens/matches/match_screen.dart';
 import 'package:dating_app/screens/users/user_screen.dart';
@@ -35,6 +36,7 @@ class MyApp extends StatelessWidget {
           UserScreen.routeName: (context) => UserScreen(),
           OnboardingScreen.routeName: (context) => OnboardingScreen(),
           MatchesScreen.routeName: (context) => MatchesScreen(),
+          ChatScreen.routeName: (context) => ChatScreen(),
         },
         // routes: {},
       ),

@@ -1,3 +1,4 @@
+import 'package:dating_app/screens/chat/chat_screen.dart';
 import 'package:dating_app/widgets/custom_app_bar.dart';
 import 'package:dating_app/widgets/user_image_small.dart';
 import 'package:flutter/material.dart';
@@ -73,45 +74,52 @@ class MatchesScreen extends StatelessWidget {
                     shrinkWrap: true,
                     itemCount: inactiveMatches.length,
                     itemBuilder: (context, index) {
-                      return Row(
-                        // crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          user.UserImageSmall(
-                            height: 70,
-                            width: 70,
-                            ImageUrl:
-                                onactiveMatches[index].matchedUser.imageUrls[0],
-                          ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                onactiveMatches[index].matchedUser.name,
-                                style: Theme.of(context).textTheme.headline5,
-                              ),
-                              SizedBox(
-                                height: 5,
-                              ),
-                              Text(
-                                onactiveMatches[index]
-                                    .chat![0]
-                                    .messages[0]
-                                    .message,
-                                style: Theme.of(context).textTheme.headline6,
-                              ),
-                              SizedBox(
-                                height: 5,
-                              ),
-                              Text(
-                                onactiveMatches[index]
-                                    .chat![0]
-                                    .messages[0]
-                                    .timeString,
-                                style: Theme.of(context).textTheme.bodyText1,
-                              ),
-                            ],
-                          ),
-                        ],
+                      return InkWell(
+                        onTap: () {
+                          Navigator.of(context).pushNamed(ChatScreen.routeName,
+                              arguments: onactiveMatches[index]);
+                        },
+                        child: Row(
+                          // crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            user.UserImageSmall(
+                              height: 70,
+                              width: 70,
+                              ImageUrl: onactiveMatches[index]
+                                  .matchedUser
+                                  .imageUrls[0],
+                            ),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  onactiveMatches[index].matchedUser.name,
+                                  style: Theme.of(context).textTheme.headline5,
+                                ),
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                Text(
+                                  onactiveMatches[index]
+                                      .chat![0]
+                                      .messages[0]
+                                      .message,
+                                  style: Theme.of(context).textTheme.headline6,
+                                ),
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                Text(
+                                  onactiveMatches[index]
+                                      .chat![0]
+                                      .messages[0]
+                                      .timeString,
+                                  style: Theme.of(context).textTheme.bodyText1,
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
                       );
                     },
                   ),
