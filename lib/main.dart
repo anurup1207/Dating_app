@@ -33,6 +33,7 @@ class MyApp extends StatelessWidget {
         theme: theme(),
         home: MatchesScreen(),
         routes: {
+          UserScreen.routeName: (context) => UserScreen(),
           OnboardingScreen.routeName: (context) => OnboardingScreen(),
           MatchesScreen.routeName: (context) => MatchesScreen(),
           ChatScreen.routeName: (context) => ChatScreen(),
