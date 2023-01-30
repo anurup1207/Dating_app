@@ -4,6 +4,7 @@ import 'package:dating_app/onboarding/onboarding_screen.dart';
 import 'package:dating_app/screens/chat/chat_screen.dart';
 import 'package:dating_app/screens/home/home_screen.dart';
 import 'package:dating_app/screens/matches/match_screen.dart';
+import 'package:dating_app/screens/profile/profile_screen.dart';
 import 'package:dating_app/screens/users/user_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -31,12 +32,13 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: 'Flutter Demo',
         theme: theme(),
-        home: MatchesScreen(),
+        home: ProfileScreen(),
         routes: {
           UserScreen.routeName: (context) => UserScreen(),
           OnboardingScreen.routeName: (context) => OnboardingScreen(),
           MatchesScreen.routeName: (context) => MatchesScreen(),
           ChatScreen.routeName: (context) => ChatScreen(),
+          ProfileScreen.routeName: (context) => ProfileScreen(),
         },
         // routes: {},
       ),

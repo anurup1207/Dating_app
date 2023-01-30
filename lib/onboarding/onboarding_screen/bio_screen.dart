@@ -38,22 +38,14 @@ class BioGraphy extends StatelessWidget {
               ),
               Wrap(
                 children: [
-                  CustomTextContainer(
-                      tabController: tabController, text: 'MUSIC'),
-                  CustomTextContainer(
-                      tabController: tabController, text: 'ECONOMICS'),
-                  CustomTextContainer(
-                      tabController: tabController, text: 'ART'),
-                  CustomTextContainer(
-                      tabController: tabController, text: 'POLITICS'),
-                  CustomTextContainer(
-                      tabController: tabController, text: 'MUSIC'),
-                  CustomTextContainer(
-                      tabController: tabController, text: 'ECONOMICS'),
-                  CustomTextContainer(
-                      tabController: tabController, text: 'ART'),
-                  CustomTextContainer(
-                      tabController: tabController, text: 'POLITICS'),
+                  CustomTextContainer(text: 'MUSIC'),
+                  CustomTextContainer(text: 'ECONOMICS'),
+                  CustomTextContainer(text: 'ART'),
+                  CustomTextContainer(text: 'POLITICS'),
+                  CustomTextContainer(text: 'MUSIC'),
+                  CustomTextContainer(text: 'ECONOMICS'),
+                  CustomTextContainer(text: 'ART'),
+                  CustomTextContainer(text: 'POLITICS'),
                 ],
               )
             ],
